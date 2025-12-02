@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Simon Mufara</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .projects-grid .project-card {
+      cursor: pointer;
+    }
+    .projects-grid .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .projects-grid .project-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+    .projects-grid .project-card p {
+      color: var(--gray);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="logo">SIMON MUFARA</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Projects Content -->
+  <div class="page-container">
+    <div class="section-header">
+      <h1>All Projects</h1>
+      <p>Click any project to view full details</p>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Transformer Project -->
+      <div class="project-card" onclick="location.href='projects/transformer.html'">
+        <img src="https://journals.plos.org/ploscompbiol/article/figure/image?size=medium&id=10.1371/journal.pcbi.1012905.g008" alt="Transformer Model">
+        <h3>bc_transformer Model</h3>
+        <p><strong>Transformer-Based Multi-Omics Drug Response Prediction</strong></p>
+        <p>Developing a transformer-based multi-omics drug response prediction model for African breast cancer patients. Applied transfer learning to fine-tune models on African-specific TNBC and HER2+ cohorts.</p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;"><strong>Period:</strong> Jan 2025 - Dec 2025 | <strong>Institution:</strong> University of Cape Town</p>
+      </div>
+
+      <!-- Variant Calling Project -->
+      <div class="project-card" onclick="location.href='projects/variant.html'">
+        <img src="https://www.biocode.org.uk/wp-content/uploads/2023/02/Course-Thumbnail-for-Cancer-Genomics-NGS-Whole-Exam-Sequencing-Variant-Calling-Using-Linux-scaled-e1677150883454.webp" alt="MTB Variant Pipeline">
+        <h3>MTB Variant Calling Pipeline</h3>
+        <p><strong>Mycobacterium tuberculosis WGS Analysis</strong></p>
+        <p>Performed end-to-end variant calling on 5+ M. tuberculosis clinical isolates using bcftools, samtools, and Snakemake. Annotated variants with SnpEff and achieved 98% QC score.</p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;"><strong>Period:</strong> Mar 2025 - Jun 2025 | <strong>Organization:</strong> H3D, Cape Town</p>
+      </div>
+
+      <!-- Global Health Equity -->
+      <div class="project-card" onclick="location.href='projects/equity.html'">
+        <img src="https://supermetrics.com/cdn-cgi/image/onerror=redirect,width=1510,height=942,format=png/https://cdn.sanity.io/images/8ly2m84z/production-2025/60bb12ef3bc0dc52f10c537d35818423638a8e9a-1510x942.png?w=1510&h=942&fit=max" alt="Health Dashboards">
+        <h3>Global Health Equity Program</h3>
+        <p><strong>Healthcare Access & Data Analytics</strong></p>
+        <p>Presented strategic vision to CEO and senior leadership. Supported 3 healthcare access programs across Sub-Saharan Africa, impacting ~10,000 patients. Developed 5+ dashboards and reports.</p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;"><strong>Period:</strong> Jan 2024 - Dec 2024 | <strong>Organization:</strong> Johnson & Johnson, Midrand</p>
+      </div>
+
+      <!-- Pediatric Internship -->
+      <div class="project-card" onclick="location.href='projects/pediatric.html'">
+        <img src="https://ccr.cancer.gov/sites/default/files/styles/half_4_3/public/2021-07/Peds%20patient.jpg?itok=pJUTOv3e" alt="Pediatric Care">
+        <h3>Early Childhood Development</h3>
+        <p><strong>Oncology & Nephrology Internship</strong></p>
+        <p>Supervised pediatric wards at Chris Hani Baragwanath Hospital and Charlotte Maxeke Johannesburg Academic Hospital. Managed 200+ Electronic Medical Records and delivered 10+ health education sessions monthly.</p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;"><strong>Period:</strong> Jan 2023 - Dec 2023 | <strong>Organization:</strong> Reach For A Dream, Johannesburg</p>
+      </div>
+
+      <!-- EH!Woza Facilitator -->
+      <div class="project-card" onclick="location.href='projects/facilitator.html'">
+        <div style="width: 100%; height: 200px; background: var(--light-gray); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 4rem; margin-bottom: 1rem;">🎓</div>
+        <h3>EH!Woza Science Workshops</h3>
+        <p><strong>Community Science Education</strong></p>
+        <p>Facilitated 5+ interactive science workshops for township students on HIV/TB awareness. Designed and delivered monthly youth engagement sessions, reaching 50+ students per session.</p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;"><strong>Period:</strong> Feb 2025 - Present | <strong>Organization:</strong> EH!Woza</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="mailto:simon.mufara1@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/simon-mufara" target="_blank">LinkedIn</a>
+        <a href="https://github.com/simon-mufara" target="_blank">GitHub</a>
+      </div>
+      <div class="copyright">
+        © 2025 Simon Mufara. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MTB Variant Pipeline — Simon Mufara</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .project-detail-page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 8rem 2rem 4rem;
+    }
+    .project-hero {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .project-icon {
+      font-size: 5rem;
+      margin-bottom: 1rem;
+    }
+    .project-detail-page h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .project-detail-page .subtitle {
+      font-size: 1.2rem;
+      color: var(--gray);
+      margin-bottom: 2rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      padding: 0.8rem 1.5rem;
+      background: var(--light-gray);
+      color: var(--black);
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+    .back-link:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+    .project-image {
+      width: 100%;
+      border-radius: 16px;
+      margin: 2rem 0;
+      border: 1px solid var(--border);
+    }
+    .tech-stack {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin: 1.5rem 0;
+    }
+    .tech-tag {
+      padding: 0.5rem 1rem;
+      background: var(--black);
+      color: var(--white);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .project-detail-page h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 2.5rem 0 1rem;
+    }
+    .project-detail-page h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem;
+    }
+    .project-detail-page ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+    .project-detail-page ul li {
+      margin: 0.8rem 0;
+      line-height: 1.7;
+    }
+    .highlight-box {
+      background: var(--light-gray);
+      padding: 2rem;
+      border-radius: 12px;
+      border-left: 4px solid var(--black);
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="logo">SIMON MUFARA</div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../gallery.html">Gallery</a></li>
+        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="../certificates.html">Certificates</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Project Content -->
+  <div class="project-detail-page">
+    <a href="../projects.html" class="back-link">← Back to Projects</a>
+    
+    <div class="project-hero">
+      <div class="project-icon">🧬</div>
+      <h1>MTB Variant Calling Pipeline</h1>
+      <p class="subtitle">End-to-End Mycobacterium tuberculosis Whole Genome Sequencing Pipeline</p>
+    </div>
+
+    <img src="https://www.biocode.org.uk/wp-content/uploads/2023/02/Course-Thumbnail-for-Cancer-Genomics-NGS-Whole-Exam-Sequencing-Variant-Calling-Using-Linux-scaled-e1677150883454.webp" alt="Variant Calling Pipeline" class="project-image">
+
+    <div class="highlight-box">
+      <strong>Project Period:</strong> March 2025 - June 2025<br>
+      <strong>Organization:</strong> Drug Discovery & Drug Development (H3D), Cape Town<br>
+      <strong>Role:</strong> Variant Calling Freelancer
+    </div>
+
+    <h2>Overview</h2>
+    <p>Developed a comprehensive end-to-end variant calling pipeline for Mycobacterium tuberculosis clinical isolates, focusing on drug resistance detection and genomic analysis. The pipeline automates the entire workflow from raw sequencing data to annotated variants with clinical significance.</p>
+
+    <h3>Key Achievements</h3>
+    <ul>
+      <li>Performed end-to-end variant calling on 5+ M. tuberculosis clinical isolates</li>
+      <li>Integrated bcftools and samtools for robust variant detection</li>
+      <li>Implemented automated workflow using Snakemake for reproducibility</li>
+      <li>Annotated variants with SnpEff for functional consequence prediction</li>
+      <li>Identified and highlighted drug resistance-associated mutations</li>
+      <li>Published full pipeline on GitHub with comprehensive documentation achieving 98% QC score</li>
+    </ul>
+
+    <h3>Technology Stack</h3>
+    <div class="tech-stack">
+      <span class="tech-tag">bcftools</span>
+      <span class="tech-tag">samtools</span>
+      <span class="tech-tag">Snakemake</span>
+      <span class="tech-tag">SnpEff</span>
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">Bash/Linux</span>
+      <span class="tech-tag">VCF Tools</span>
+    </div>
+
+    <h2>Pipeline Workflow</h2>
+    
+    <h3>1. Quality Control & Preprocessing</h3>
+    <ul>
+      <li>Raw sequencing data quality assessment using FastQC</li>
+      <li>Adapter trimming and quality filtering</li>
+      <li>Read alignment to M. tuberculosis reference genome (H37Rv)</li>
+      <li>Duplicate removal and quality score recalibration</li>
+    </ul>
+
+    <h3>2. Variant Calling</h3>
+    <ul>
+      <li>SNP and indel detection using bcftools mpileup and call</li>
+      <li>Multi-sample variant calling for comparative analysis</li>
+      <li>Filtering based on quality metrics (depth, mapping quality, strand bias)</li>
+      <li>Generation of high-confidence variant sets</li>
+    </ul>
+
+    <h3>3. Variant Annotation</h3>
+    <ul>
+      <li>Functional annotation using SnpEff with MTB-specific database</li>
+      <li>Prediction of variant effects (synonymous, missense, nonsense)</li>
+      <li>Gene impact assessment (HIGH, MODERATE, LOW)</li>
+      <li>Integration with known drug resistance mutations databases</li>
+    </ul>
+
+    <h3>4. Drug Resistance Analysis</h3>
+    <ul>
+      <li>Cross-referencing with WHO drug resistance mutation catalog</li>
+      <li>Identification of resistance-conferring mutations in key genes (rpoB, katG, inhA, etc.)</li>
+      <li>Classification of isolates based on resistance patterns (MDR-TB, XDR-TB)</li>
+      <li>Generation of clinical reports with actionable insights</li>
+    </ul>
+
+    <h2>Technical Implementation</h2>
+
+    <h3>Automation with Snakemake</h3>
+    <p>Implemented the entire pipeline as a Snakemake workflow, providing:</p>
+    <ul>
+      <li>Reproducible and scalable analysis</li>
+      <li>Automatic dependency management</li>
+      <li>Parallel processing capabilities</li>
+      <li>Error handling and recovery</li>
+      <li>Easy configuration for different datasets</li>
+    </ul>
+
+    <h3>Quality Metrics</h3>
+    <p>Achieved exceptional quality control standards:</p>
+    <ul>
+      <li>98% QC score for pipeline documentation and implementation</li>
+      <li>Average read depth >50x across all samples</li>
+      <li>Variant call quality scores >30 (99.9% accuracy)</li>
+      <li>Comprehensive validation against reference datasets</li>
+    </ul>
+
+    <h3>Data Visualization</h3>
+    <ul>
+      <li>Created interactive visualizations of variant distributions</li>
+      <li>Generated coverage plots for quality assessment</li>
+      <li>Developed resistance pattern heatmaps</li>
+      <li>Utilized generative AI to present findings in accessible formats</li>
+    </ul>
+
+    <div class="highlight-box">
+      <h3 style="margin-top: 0;">Clinical Impact</h3>
+      <p>This pipeline provides healthcare practitioners with rapid, accurate identification of drug-resistant TB strains, enabling:</p>
+      <ul style="margin-top: 1rem;">
+        <li>Faster treatment decisions based on genomic data</li>
+        <li>Reduced empirical treatment failures</li>
+        <li>Better patient outcomes through targeted therapy</li>
+        <li>Epidemiological tracking of resistance patterns</li>
+      </ul>
+    </div>
+
+    <h2>Deliverables</h2>
+    <ul>
+      <li><strong>GitHub Repository:</strong> Complete pipeline code with comprehensive documentation</li>
+      <li><strong>User Manual:</strong> Step-by-step guide for pipeline execution</li>
+      <li><strong>Sample Reports:</strong> Example outputs demonstrating clinical utility</li>
+      <li><strong>Quality Metrics:</strong> Validation results and performance benchmarks</li>
+    </ul>
+
+    <h3>Future Enhancements</h3>
+    <ul>
+      <li>Integration with cloud computing platforms for scalability</li>
+      <li>Addition of phylogenetic analysis modules</li>
+      <li>Development of web-based interface for non-bioinformaticians</li>
+      <li>Expansion to other pathogenic mycobacteria species</li>
+      <li>Real-time analysis capabilities for outbreak surveillance</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="mailto:simon.mufara1@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/simon-mufara" target="_blank">LinkedIn</a>
+        <a href="https://github.com/simon-mufara" target="_blank">GitHub</a>
+      </div>
+      <div class="copyright">
+        © 2025 Simon Mufara. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

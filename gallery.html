@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Simon Mufara</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+    .gallery-item {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: zoom-in;
+    }
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.95);
+      z-index: 10000;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img {
+      max-width: 95%;
+      max-height: 95%;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 2rem; right: 2rem;
+      background: white;
+      color: black;
+      border: none;
+      width: 50px; height: 50px;
+      border-radius: 50%;
+      font-size: 2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="logo">SIMON MUFARA</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Gallery Content -->
+  <div class="page-container">
+    <div class="section-header">
+      <h1>Simon In Action</h1>
+      <p>Moments from conferences, research, community engagement, and professional development</p>
+    </div>
+
+    <div class="gallery-grid" id="gallery">
+      <!-- All 21 images are injected by JavaScript below -->
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="event.stopPropagation(); closeLightbox()">×</button>
+    <img id="lightbox-img" src="" alt="Full size image">
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="mailto:simon.mufara1@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/simon-mufara" target="_blank">LinkedIn</a>
+        <a href="https://github.com/simon-mufara" target="_blank">GitHub</a>
+      </div>
+      <div class="copyright">
+        © 2025 Simon Mufara. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // All your 21 images (exact filenames)
+    const images = [
+      "WhatsApp Image 2025-11-25 at 22.54.47.jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.48 (1).jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.48 (2).jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.48 (3).jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.48.jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.49 (1).jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.49 (2).jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.49 (3).jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.49 (4).jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.49.jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.50 (1).jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.50 (2).jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.50 (3).jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.50 (4).jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.50.jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.51 (1).jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.51 (2).jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.51 (3).jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.51 (4).jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.51.jpeg",
+      "WhatsApp Image 2025-11-25 at 22.54.52.jpeg"
+    ];
+
+    const gallery = document.getElementById('gallery');
+
+    images.forEach(filename => {
+      const item = document.createElement('div');
+      item.className = 'gallery-item';
+      item.onclick = () => openLightbox(`assets/images/${filename}`);
+
+      const img = document.createElement('img');
+      img.src = `assets/images/${filename}`;
+      img.alt = "Simon Mufara – Gallery";
+      img.loading = "lazy";
+
+      item.appendChild(img);
+      gallery.appendChild(item);
+    });
+
+    // Lightbox functions
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>

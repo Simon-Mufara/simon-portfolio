@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificates — Simon Mufara</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="logo">SIMON MUFARA</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="certificates.html" class="active">Certificates</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Certificates Content -->
+  <div class="page-container">
+    <div class="section-header">
+      <h1>Awards & Certifications</h1>
+      <p>Professional development and recognition</p>
+    </div>
+
+    <div class="certificates-grid">
+      <!-- Award -->
+      <div class="certificate-card">
+        <h3>Top 10 Most Employable Graduate</h3>
+        <p class="date">December 2024</p>
+        <p class="issuer">GradStar, Johannesburg</p>
+        <p style="margin-top: 1rem; color: var(--gray);">Selected from 500 graduates who participated in the awards. Narrowed to top 100 for a 3-day workshop event. Earned trophy and top 10 recognition for excellence and leadership potential.</p>
+      </div>
+
+      <!-- Power BI -->
+      <div class="certificate-card">
+        <h3>Power BI Essential Training</h3>
+        <p class="date">August 2025</p>
+        <p class="issuer">LinkedIn Learning</p>
+        <p style="margin-top: 1rem; color: var(--gray);">Comprehensive training in data modeling, DAX formulas, interactive dashboards, and visualization best practices.</p>
+      </div>
+
+      <!-- PHA4GE -->
+      <div class="certificate-card">
+        <h3>Certificate of Participation</h3>
+        <p class="date">October 2025</p>
+        <p class="issuer">Public Health Alliance for Genomic Epidemiology (PHA4GE)</p>
+        <p style="margin-top: 1rem; color: var(--gray);">Participated in genomic epidemiology and public health initiatives.</p>
+      </div>
+
+      <!-- Azure AI -->
+      <div class="certificate-card">
+        <h3>Microsoft Azure AI Essentials</h3>
+        <p class="date">October 2025</p>
+        <p class="issuer">LinkedIn Learning</p>
+        <p style="margin-top: 1rem; color: var(--gray);">Workloads and Machine Learning on Azure. Understanding cloud-based AI solutions and implementation.</p>
+      </div>
+
+      <!-- GCP -->
+      <div class="certificate-card">
+        <h3>Introduction to Good Clinical Laboratory Practice</h3>
+        <p class="date">July 2024</p>
+        <p class="issuer">The Global Health Network</p>
+        <p style="margin-top: 1rem; color: var(--gray);">Fundamentals of clinical laboratory standards and quality assurance.</p>
+      </div>
+
+      <!-- Environmental Health -->
+      <div class="certificate-card">
+        <h3>General Environmental Health</h3>
+        <p class="date">January 2024</p>
+        <p class="issuer">Region 6 South Central Public Health Training Center</p>
+        <p style="margin-top: 1rem; color: var(--gray);">Environmental health principles and public health applications.</p>
+      </div>
+
+      <!-- ICH GCP -->
+      <div class="certificate-card">
+        <h3>ICH Good Clinical Practice E6 (R2)</h3>
+        <p class="date">August 2023</p>
+        <p class="issuer">The Global Health Network</p>
+        <p style="margin-top: 1rem; color: var(--gray);">International standards for designing, conducting, and reporting clinical trials.</p>
+      </div>
+
+      <!-- First Aid -->
+      <div class="certificate-card">
+        <h3>First Aid Certification</h3>
+        <p class="date">March 2023 - March 2026</p>
+        <p class="issuer">MSHEQ Health & Safety Consultants</p>
+        <p style="margin-top: 1rem; color: var(--gray);">Certified in emergency first aid response and safety procedures.</p>
+      </div>
+    </div>
+
+   <!-- Certificate Images Section -->
+<div style="margin-top: 5rem; padding: 0 2rem;">
+  <h2 style="text-align: center; margin-bottom: 1rem;">Certificate Images</h2>
+  <p style="text-align: center; color: var(--gray); margin-bottom: 3rem;">
+    Click any image to view full size
+  </p>
+
+  <div class="gallery-grid" id="cert-gallery">
+    <!-- Images loaded automatically by the script below -->
+  </div>
+</div>
+
+<script>
+  const gallery = document.getElementById('cert-gallery');
+
+  const certificateImages = [
+    "WhatsApp Image 2025-12-02 at 23.42.42.jpeg",
+    "WhatsApp Image 2025-12-02 at 23.42.42 (1).jpeg",
+    "WhatsApp Image 2025-12-02 at 23.42.42 (2).jpeg",
+    "WhatsApp Image 2025-12-02 at 23.42.42 (3).jpeg",
+    "WhatsApp Image 2025-12-02 at 23.42.43.jpeg",
+    "WhatsApp Image 2025-12-02 at 23.42.43 (1).jpeg"
+  ];
+
+  // If somehow no images, show a message
+  if (certificateImages.length === 0) {
+    gallery.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding:4rem; background:var(--light-gray); border-radius:12px;">
+      <p style="color:var(--gray);">No certificates found in assets/images/Certificates/</p>
+    </div>`;
+  } else {
+    certificateImages.forEach(filename => {
+      const div = document.createElement('div');
+      div.className = 'gallery-item';
+
+      const img = document.createElement('img');
+      img.src = `assets/images/Certificates/${filename}`;
+      img.alt = "Certificate";
+      img.loading = "lazy";
+      img.style.cssText = `
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease;
+        cursor: zoom-in;
+      `;
+
+      // Click = open full size in new tab
+      img.onclick = () => window.open(img.src, '_blank');
+
+      // Nice little hover effect
+      img.onmouseover = () => img.style.transform = 'scale(1.03)';
+      img.onmouseout = () => img.style.transform = 'scale(1)';
+
+      div.appendChild(img);
+      gallery.appendChild(div);
+    });
+  }
+</script>
+
+<style>
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+  .gallery-item {
+    text-align: center;
+  }
+</style>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="mailto:simon.mufara1@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/simon-mufara" target="_blank">LinkedIn</a>
+        <a href="https://github.com/simon-mufara" target="_blank">GitHub</a>
+      </div>
+      <div class="copyright">
+        © 2025 Simon Mufara. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bc_transformer Model — Simon Mufara</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .project-detail-page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 8rem 2rem 4rem;
+    }
+    .project-hero {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .project-icon {
+      font-size: 5rem;
+      margin-bottom: 1rem;
+    }
+    .project-detail-page h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .project-detail-page .subtitle {
+      font-size: 1.2rem;
+      color: var(--gray);
+      margin-bottom: 2rem;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      padding: 0.8rem 1.5rem;
+      background: var(--light-gray);
+      color: var(--black);
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+    .back-link:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+    .project-image {
+      width: 100%;
+      border-radius: 16px;
+      margin: 2rem 0;
+      border: 1px solid var(--border);
+    }
+    .tech-stack {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin: 1.5rem 0;
+    }
+    .tech-tag {
+      padding: 0.5rem 1rem;
+      background: var(--black);
+      color: var(--white);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .project-detail-page h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 2.5rem 0 1rem;
+    }
+    .project-detail-page h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem;
+    }
+    .project-detail-page ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+    .project-detail-page ul li {
+      margin: 0.8rem 0;
+      line-height: 1.7;
+    }
+    .highlight-box {
+      background: var(--light-gray);
+      padding: 2rem;
+      border-radius: 12px;
+      border-left: 4px solid var(--black);
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="logo">SIMON MUFARA</div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../gallery.html">Gallery</a></li>
+        <li><a href="../resume.html">Resume</a></li>
+        <li><a href="../certificates.html">Certificates</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Project Content -->
+  <div class="project-detail-page">
+    <a href="../projects.html" class="back-link">← Back to Projects</a>
+    
+    <div class="project-hero">
+      <div class="project-icon">🤖</div>
+      <h1>bc_transformer Model</h1>
+      <p class="subtitle">Transformer-Based Multi-Omics Drug Response Prediction for African Breast Cancer</p>
+    </div>
+
+    <img src="https://journals.plos.org/ploscompbiol/article/figure/image?size=medium&id=10.1371/journal.pcbi.1012905.g008" alt="Transformer Model" class="project-image">
+
+    <div class="highlight-box">
+      <strong>Project Period:</strong> January 2025 - December 2025<br>
+      <strong>Institution:</strong> University of Cape Town<br>
+      <strong>Role:</strong> Honours Bioinformatics Researcher
+    </div>
+
+    <h2>Overview</h2>
+    <p>Developed an advanced transformer-based multi-omics model specifically designed to predict drug response in African breast cancer patients. This project addresses the critical underrepresentation of African populations in cancer research and personalized medicine.</p>
+
+    <h3>Key Achievements</h3>
+    <ul>
+      <li>Applied transfer learning to fine-tune models on African-specific TNBC (Triple-Negative Breast Cancer) and HER2+ cohorts</li>
+      <li>Achieved improved accuracy compared to baseline models through population-specific training</li>
+      <li>Integrated 5+ major datasets including BCaPE, H3Africa, GEO, TCGA, and GDSC</li>
+      <li>Processed and analyzed over 1,000 patient samples</li>
+      <li>Successfully integrated multiple omics layers: gene expression, mutations, and methylation data</li>
+    </ul>
+
+    <h3>Technology Stack</h3>
+    <div class="tech-stack">
+      <span class="tech-tag">PyTorch</span>
+      <span class="tech-tag">Transformers</span>
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">pandas</span>
+      <span class="tech-tag">scikit-learn</span>
+      <span class="tech-tag">NumPy</span>
+      <span class="tech-tag">matplotlib</span>
+      <span class="tech-tag">seaborn</span>
+    </div>
+
+    <h3>Methodology</h3>
+    <p>The project employed a comprehensive approach to multi-omics integration and machine learning:</p>
+    <ul>
+      <li><strong>Data Preprocessing:</strong> Normalized and harmonized data across multiple omics layers and datasets</li>
+      <li><strong>Feature Engineering:</strong> Developed novel features for multi-modal data integration specific to breast cancer subtypes</li>
+      <li><strong>Model Architecture:</strong> Designed transformer-based architecture utilizing attention mechanisms to capture complex omics interactions</li>
+      <li><strong>Transfer Learning:</strong> Fine-tuned pre-trained models on African-specific cancer cohorts to improve prediction accuracy</li>
+      <li><strong>Validation:</strong> Employed rigorous cross-validation and holdout test sets to ensure model generalizability</li>
+    </ul>
+
+    <h3>Data Integration</h3>
+    <p>The project successfully integrated multiple large-scale datasets:</p>
+    <ul>
+      <li><strong>BCaPE (Breast Cancer in African Populations Epidemiology):</strong> African-specific breast cancer genomics data</li>
+      <li><strong>H3Africa:</strong> Human Heredity and Health in Africa consortium data</li>
+      <li><strong>GEO (Gene Expression Omnibus):</strong> Public gene expression repositories</li>
+      <li><strong>TCGA (The Cancer Genome Atlas):</strong> Comprehensive cancer genomics data</li>
+      <li><strong>GDSC (Genomics of Drug Sensitivity in Cancer):</strong> Drug response information</li>
+    </ul>
+
+    <h3>Clinical Impact</h3>
+    <p>This research contributes significantly to personalized medicine for African breast cancer patients:</p>
+    <ul>
+      <li>Enables prediction of drug efficacy before treatment administration</li>
+      <li>Addresses critical gaps in cancer research equity and representation</li>
+      <li>Provides foundation for population-specific treatment strategies</li>
+      <li>Potentially reduces treatment failures and improves patient outcomes</li>
+      <li>Creates framework for similar studies in other underrepresented populations</li>
+    </ul>
+
+    <h3>Technical Challenges & Solutions</h3>
+    <ul>
+      <li><strong>Data Heterogeneity:</strong> Developed robust normalization pipelines to handle diverse data sources</li>
+      <li><strong>Missing Data:</strong> Implemented advanced imputation techniques specific to omics data</li>
+      <li><strong>Class Imbalance:</strong> Applied sophisticated resampling and weighting strategies</li>
+      <li><strong>Computational Resources:</strong> Optimized model architecture for efficient training on available hardware</li>
+    </ul>
+
+    <div class="highlight-box">
+      <h3 style="margin-top: 0;">Research Significance</h3>
+      <p>This project represents a crucial step toward equitable healthcare by ensuring that AI-driven precision medicine tools work effectively for African populations, who have historically been underrepresented in cancer genomics research.</p>
+    </div>
+
+    <h3>Future Directions</h3>
+    <ul>
+      <li>Expand model to additional cancer subtypes</li>
+      <li>Incorporate additional omics layers (proteomics, metabolomics)</li>
+      <li>Collaborate with clinical partners for prospective validation</li>
+      <li>Develop user-friendly clinical decision support tools</li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="mailto:simon.mufara1@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/simon-mufara" target="_blank">LinkedIn</a>
+        <a href="https://github.com/simon-mufara" target="_blank">GitHub</a>
+      </div>
+      <div class="copyright">
+        © 2025 Simon Mufara. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
